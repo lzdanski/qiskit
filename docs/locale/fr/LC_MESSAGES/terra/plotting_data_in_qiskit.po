@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-31 13:06-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../terra/plotting_data_in_qiskit.rst:5
+msgid "Ploting Data in Qiskit"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:7
+msgid ""
+"To use this notebook you need to ensure that you have `maptlotlib "
+"<https://matplotlib.org/>`__ installed on your system"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:20
+msgid "Plot histogram"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:22
+msgid ""
+"To visualize the data from a quantum circuit run on a real device or "
+"``qasm_simulator`` we have made a simple function"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:25
+msgid "``plot_histogram(data)``"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:27
+msgid "As an example we make a 2 qubit Bell state"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:67
+msgid "Options when plotting a histogram"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:69
+msgid ""
+"The ``plot_histogram()`` has a few options to adjust the output graph. "
+"The first option is the ``legend`` kwarg. This is used to provide a label"
+" for the executions. It takes a list of strings use to label each "
+"execution’s results. This is mostly useful when plotting multiple "
+"execution results in the same histogram. The ``sort`` kwarg is used to "
+"adjust the order the bars in the histogram are rendered. It can be set to"
+" either ascending order with ``asc`` or descending order with ``dsc``. "
+"The ``number_to_keep`` kwarg takes an integer for the number of terms to "
+"show, the rest are grouped together in a single bar called rest. You can "
+"adjust the color of the bars with the ``color`` kwarg which either takes "
+"a string or a list of strings for the colors to use for the bars for each"
+" execution. You can adjust whether labels are printed above the bars or "
+"not with the ``bar_labels`` kwarg. The last option available is the "
+"``figsize`` kwarg which takes a tuple of the size in inches to make the "
+"output figure."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:113
+msgid "Using the output from plot_histogram()"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:115
+msgid ""
+"When using the plot_histogram() function it returns a "
+"``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks "
+"understand this return type and renders it for us in this tutorial, but "
+"when running outside of jupyter you do not have this feature "
+"automatically. However, ``matplotlib.Figure`` class natively has methods "
+"to both display and save the visualization. You can call ``.show()`` on "
+"the returned object from ``plot_histogram()`` to open the image in a new "
+"window (assuming your configured matplotlib backend is interactive). Or "
+"alternatively you can call ``.savefig(out.png)`` to save the figure to "
+"``out.png``. The ``savefig()`` takes a path so you can just the location "
+"and filename where you’re saving the output."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:128
+msgid "Interactive histogram plots for Jupyter Notebooks."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:130
+msgid ""
+"There is an alternate function for plotting histograms when running in a "
+"Jupyter notebook. This function ``iplot_histogram()`` is made using an "
+"externally hosted JS library for use in Jupyter notebooks. The "
+"interactive plot can only be used if you’re running inside a jupyter "
+"notebook and only if you have external connectivity to the host with the "
+"JS library. If you use ``iplot_histogram()`` outside of a jupyter "
+"notebook it will fail."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:174
+msgid "Plot State"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:176
+msgid ""
+"In many situations you want to see the state of a quantum computer. This "
+"could be for debugging. Here we assume you have this state (either from "
+"simulation or state tomography) and the goal is to visualize the quantum "
+"state. This requires exponential resources, so we advise to only view the"
+" state of small quantum systems. There are several functions for "
+"generating different types of visualization of a quantum state"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:191
+msgid ""
+"A quantum state is either a state matrix :math:`\\rho` (Hermitian matrix)"
+" or statevector :math:`|\\psi\\rangle` (complex vector). The state matrix"
+" is related to the statevector by"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:195
+msgid "\\rho = |\\psi\\rangle\\langle \\psi|."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:197
+msgid ""
+"And is more general as it can represent mixed states (positive sum of "
+"statevectors)"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:200
+msgid "\\rho = \\sum_k p_k |\\psi_k\\rangle\\langle \\psi_k |."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:213
+msgid ""
+"The visualizations generated by the functions are: - "
+"``'plot_state_city'``: The standard view for quantum states where the "
+"real and imaginary (imag) parts of the state matrix are plotted like a "
+"city - ``'plot_state_qsphere'``: The Qiskit unique view of a quantum "
+"state where the amplitude and phase of the state vector are plotted in a "
+"spherical ball. The amplitude is the thickness of the arrow and the phase"
+" is the color. For mixed states it will show different ``'qsphere'`` for "
+"each component. - ``'plot_state_paulivec'``: The representation of the "
+"state matrix using Pauli operators as the basis "
+":math:`\\rho=\\sum_{q=0}^{d^2-1}p_jP_j/d` - ``'plot_state_hinton'``: Same"
+" as ``'city'`` but with the size of the element represents the value of "
+"the matrix element."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:215
+msgid ""
+"- ``'plot_bloch_multivector'``: The projection of the quantum state onto "
+"the single qubit space and plotting on a bloch sphere."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:283
+msgid ""
+"Here we see that there is no information about the quantum state in the "
+"single qubit space as all vectors are zero."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:287
+msgid "Options when using state plotting functions"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:289
+msgid ""
+"The various functions for plotting quantum state provide a number of "
+"options to adjust the how the plots are rendered. Which options depend on"
+" the function being used."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:293
+msgid "**plot_state_city()** options"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:295
+#: ../../terra/plotting_data_in_qiskit.rst:313
+#: ../../terra/plotting_data_in_qiskit.rst:329
+#: ../../terra/plotting_data_in_qiskit.rst:350
+#: ../../terra/plotting_data_in_qiskit.rst:464
+msgid "**title** (str): a string that represents the plot title"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:296
+#: ../../terra/plotting_data_in_qiskit.rst:314
+#: ../../terra/plotting_data_in_qiskit.rst:330
+#: ../../terra/plotting_data_in_qiskit.rst:346
+#: ../../terra/plotting_data_in_qiskit.rst:351
+msgid "**figsize** (tuple): figure size in inches (width, height)."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:297
+msgid ""
+"**color** (list): a list of len=2 giving colors for real and imaginary "
+"components of matrix elements."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:311
+msgid "**plot_state_hinton()** options"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:327
+msgid "**plot_state_paulivec()** options"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:331
+msgid "**color** (list or str): color of the expectation value bars."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:344
+msgid "**plot_state_qsphere()** options"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:348
+msgid "**plot_bloch_multivector()** options"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:365
+msgid "Using the output from state plotting functions"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:367
+msgid ""
+"When using the any of the state plotting functions it returns a "
+"``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks "
+"understand this return type and renders it for us in this tutorial, but "
+"when running outside of jupyter you do not have this feature "
+"automatically. However, ``matplotlib.Figure`` class natively has methods "
+"to both display and save the visualization. You can call ``.show()`` on "
+"the returned object to open the image in a new window (assuming your "
+"configured matplotlib backend is interactive). Or alternatively you can "
+"call ``.savefig(out.png)`` to save the figure to ``out.png`` in the "
+"current working directory. The ``savefig()`` takes a path so you can just"
+" the location and filename where you’re saving the output."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:380
+msgid "Interactive State Plots for Jupyter Notebooks"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:382
+msgid ""
+"Just like with ``plot_histogram()`` there is a second set of functions "
+"for each of the functions to plot the quantum state. These functions have"
+" the same name but with a prepended ``i``:"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:394
+msgid ""
+"these functions are made using an externally hosted JS library for use in"
+" Jupyter notebooks. The interactive plot can only be used if you’re "
+"running inside a jupyter notebook and only if you have external "
+"connectivity to the host with the JS library. If you use these functions "
+"outside of a jupyter notebook it will fail."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:436
+msgid "Plot Bloch Vector"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:438
+msgid ""
+"A standard way of plotting a quantum system is using the Bloch vector. "
+"This only works for a single qubit and takes as inputs the Bloch vector."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:441
+msgid ""
+"The Bloch vector is defined as :math:`[x = \\mathrm{Tr}[X \\rho], y = "
+"\\mathrm{Tr}[Y \\rho], z = \\mathrm{Tr}[Z \\rho]]`, where :math:`X`, "
+":math:`Y`, and :math:`Z` are the Pauli operators for a single qubit and "
+":math:`\\rho` is the state matrix."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:462
+msgid "Options for plot_bloch_vector()"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:465
+msgid "**figsize** (tuple): Figure size in inches (width, height)."
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:479
+msgid "Adjusting the output from plot_bloch_vector()"
+msgstr ""
+
+#: ../../terra/plotting_data_in_qiskit.rst:481
+msgid ""
+"When using the ``plot_bloch_vector`` function it returns a "
+"``matplotlib.Figure`` for the rendered visualization. Jupyter notebooks "
+"understand this return type and renders it for us in this tutorial, but "
+"when running outside of jupyter you do not have this feature "
+"automatically. However, ``matplotlib.Figure`` class natively has methods "
+"to both display and save the visualization. You can call ``.show()`` on "
+"the returned object to open the image in a new window (assuming your "
+"configured matplotlib backend is interactive). Or alternatively you can "
+"call ``.savefig(out.png)`` to save the figure to ``out.png`` in the "
+"current working directory. The ``savefig()`` takes a path so you can just"
+" the location and filename where you’re saving the output."
+msgstr ""
+

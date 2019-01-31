@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-31 13:06-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../terra/quantum_circuits.rst:5 ../../terra/quantum_circuits.rst:89
+msgid "Quantum Circuits"
+msgstr "Circuits quantiques"
+
+#: ../../terra/quantum_circuits.rst:7
+msgid ""
+"The ``QuantumCircuit``, ``QuantumRegister``, and ``ClassicalRegister`` "
+"are the main objects for Qiskit Terra. Most users will be able to do all "
+"they want with these objects."
+msgstr ""
+"Le ``QuantumCircuit``, le ``QuantumRegister``, et le ``ClassicalRegister`` "
+"sont les objets principaux pour Qiskit Terra.  La majorité d'utilisateurs serait capable de completer tous "
+"qu'ils veulent avec lesquels."
+
+#: ../../terra/quantum_circuits.rst:19
+msgid "Quantum and Classical Registers"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:21
+msgid "Quantum and Classical Registers are declared using the following:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:31
+msgid ""
+"The name is optional. If not given Qiskit will name it :math:`qi` where "
+":math:`i` is an interger which will count from 0. The name and size can "
+"be returned using the following:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:47
+msgid "You can test if the register are the same or different."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:91
+msgid ""
+"Quantum Circuits are made using registers. Either when initiated or by "
+"using the ``add_register`` command."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:118
+msgid "is the same as"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:150
+msgid ""
+"Note: The order of registers in the list is the order they are initiated "
+"or added (**not** the tensor product for quantum registers)."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:191
+msgid ""
+"Note: The circuit drawer has the last register added at the bottom and if"
+" we add a new register it will add it to the bottom of the circuit."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:199
+msgid "Extending a circuit"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:201
+msgid ""
+"In many situations you may have two circuits that you want to concatenate"
+" together to form a new circuit. This is very useful when one circuit has"
+" no measurements and the final circuit represents a measurement."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:280
+msgid ""
+"It even works when the circuits have different registers. Let’s start by "
+"making two new circuits:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:321
+msgid "The new register is added to the circuit:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:344
+msgid "We have also overloaded ``+=`` to the ``QuantumCircuit`` object:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:369
+msgid "Outcomes of Quantum Circuits"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:371
+msgid ""
+"In the circuit output, the most significant bit (MSB) is to the left and "
+"the least significant bit (LSB) is to the right (i.e. we follow the "
+"regular computer science little endian ordering). In this example:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:396
+msgid ""
+"qubit register :math:`Q_0` is prepared in the state :math:`|10\\rangle` "
+"and :math:`Q_1` is in the state :math:`|01\\rangle` giving a total state "
+":math:`|0110\\rangle` (:math:`Q1\\otimes Q0`)."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:404
+msgid ""
+"Note: The tensor order in Qiskit goes as :math:`Q_n \\otimes .. Q_1 "
+"\\otimes Q_0`"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:411
+msgid ""
+"That is the four qubit statevector of length 16 with the 6th element "
+"(``int('0110',2)=6``) being one. Note the element count starts from zero."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:429
+msgid ""
+"To check the fidelity of this state with the ``basis_state`` in Qiskit "
+"Terra you can use:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:445
+msgid ""
+"We can also use Qiskit Terra to make the unitary operator representing "
+"the circuit (provided there are no measurements). This will be a "
+":math:`16\\otimes16` matrix equal to :math:`I\\otimes X\\otimes X\\otimes"
+" I`. To check this is correct we can use the ``Pauli`` class and the "
+"``process_fidelity`` function."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:467
+msgid ""
+"To map the information of the quantum state to the classial world we have"
+" to use the example with measurements ``qc``:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:499
+msgid ""
+"This will map the quantum state to the classical world and since the "
+"state has no superpositions it will be deterministic and equal to ``'01 "
+"10'``. Here a space is used to separate the registers."
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:516
+msgid ""
+"To show that it does not matter how you add the registers we run the same"
+" as above on the second example circuit:"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:570
+msgid "Counting circuit resources"
+msgstr ""
+
+#: ../../terra/quantum_circuits.rst:572
+msgid ""
+"A ``QuantumCircuit`` object provides methods for inquiring its resource "
+"use. This includes the number of qubits, operations, and a few other "
+"things."
+msgstr ""

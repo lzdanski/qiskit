@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, Qiskit Development Team
+# This file is distributed under the same license as the Qiskit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Qiskit \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-31 13:06-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../terra/index.rst:2
+msgid "Qiskit Terra Documentation"
+msgstr "La documentation de Qiskit Terra"
+
+#: ../../terra/index.rst:20
+msgid "Authors"
+msgstr "Les Auteurs"
+
+#: ../../terra/index.rst:22
+msgid ""
+"Qiskit Terra would not be possible without the `many contributors "
+"<https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_ from our "
+"community."
+msgstr ""
+"Qiskit Terra ne serait pas possible sans `les nombreux contributeurs "
+"<https://github.com/Qiskit/qiskit-terra/graphs/contributors>`_ de notre "
+"communauté."
